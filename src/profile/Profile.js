@@ -13,13 +13,13 @@ const Profile = (props) => {
             <h1>{props.fullName}</h1>
             <h1>{props.bio} </h1>
             <h1>{props.profession} </h1>
-            <button onClick={alet} > Click me {props.fullName} </button>
+            <button onClick={(e) => handleName(e,props.fullName)} > Click me {props.fullName} </button>
         </div>
     )
 }
 
-const alet = props => {
-    alert(`hi there ${props.fullName}`)
+function handleName(e , parameter) {
+    alert(`hi there ${parameter}`)
 }
 
 export default Profile
