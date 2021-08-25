@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from "prop-types";
 
 
 
@@ -20,6 +20,21 @@ const Profile = (props) => {
 
 function handleName(e , parameter) {
     alert(`hi there ${parameter}`)
+}
+
+Profile.defaultProps = {
+    fullName:'isa Haji',
+    bio: 'dev',
+    profession:'dev',
+    children: 'logo'
+}
+
+Profile.propTypes = {
+    fullName: PropTypes.string,
+    bio: PropTypes.string,
+    profession:PropTypes.string,
+    children: PropTypes.any
+
 }
 
 export default Profile
